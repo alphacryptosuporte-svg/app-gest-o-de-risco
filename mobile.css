@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Camada mobile. Carregada só em telas de celular (media no <link>).
+   No desktop este arquivo não é aplicado: o layout continua o de sempre.
+   ========================================================================== */
+
+html{-webkit-text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
+button,.row,tbody tr,.sd summary,.pi{touch-action:manipulation}
+body{overscroll-behavior-y:contain;padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+body.mform{overflow:hidden}
+
+/* ---------- Elementos injetados pelo mobile.js ---------- */
+.mob-only{display:block!important}
+.fab.mob-only{display:none!important}
+body[data-tab="T"]:not(.mform) .fab.mob-only{display:grid!important}
+.mclose.mob-only{display:grid!important}
+.dots.mob-only{display:flex!important}
+
+/* ---------- Estrutura geral ---------- */
+.wrap{padding:12px 14px calc(24px + env(safe-area-inset-bottom,0px))}
+header{margin-bottom:12px;gap:8px}
+h1{font-size:25px}
+header p{font-size:12.5px;line-height:1.4}
+.today{font-size:12px;padding:5px 12px}
+.card{padding:16px;border-radius:18px;backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(12,12,14,.9)}
+.sys:hover{transform:none}
+.card h3,.rules h3,.reg h3,.hist h3{font-size:15px}
+
+/* Banner de status fixo no topo ao rolar */
+.banner{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:30;padding:10px 14px;font-size:13px;line-height:1.35;border-radius:14px;margin-bottom:14px;background:rgba(12,12,14,.96)}
+.banner.bad{background:rgba(60,8,8,.96)}
+
+/* ---------- Barra de abas inferior ---------- */
+.tabs{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%!important;max-width:none;margin:0;z-index:60;
+ display:grid!important;grid-template-columns:repeat(5,1fr);gap:2px;overflow:visible;
+ padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));
+ border:0;border-top:1px solid var(--line2);border-radius:0;
+ background:rgba(9,10,13,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+ min-height:52px;padding:6px 2px!important;flex:none!important;border-radius:12px;
+ font:600 10.5px var(--f);color:var(--ink3);background:none}
+.tabs button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tabs button.on{background:rgba(34,229,255,.1);color:#22e5ff;box-shadow:none}
+.tabs button:hover:not(.on){background:none;color:var(--ink3)}
+
+/* ---------- Aba Risco ---------- */
+.grid{display:flex;flex-direction:column;gap:14px}
+.grid>div{display:contents}
+.cards{order:1;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 14px;
+ margin:0 -14px;padding:0 14px 2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cards::-webkit-scrollbar{display:none}
+.cards .card{flex:0 0 88%;scroll-snap-align:start}
+.dots{order:1;justify-content:center;gap:7px;margin:-6px 0 0}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--track);transition:background .2s,transform .2s}
+.dots i.on{background:#fff;transform:scale(1.15)}
+.grid>aside{order:2}
+.rules{order:3;margin-top:0;grid-template-columns:1fr;gap:12px}
+.rules .card{padding:16px}
+.ring{width:160px;height:160px}
+.mid b{font-size:30px}
+.card.bank{margin-bottom:14px}
+.field input{font-size:20px;padding:14px 40px 14px 16px}
+.field.pre input{padding-left:34px}
+.hist{margin-top:14px}
+.list{max-height:none}
+.row{padding:12px 0}
+.row button{font-size:22px;padding:6px 12px}
+
+/* ---------- Campos e botões com alvo de toque confortável ---------- */
+.tf input,.tf textarea,.sp input,.rfr input,.rfa input,.bl input,#rfM,.lg2 input[type=text]{font-size:16px!important}
+.tf input,.tf textarea{padding:12px}
+.ghost,.go{min-height:48px;font-size:15px}
+.seg button{padding:13px 8px;font-size:14px}
+.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-14px;padding-right:14px}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;padding:10px 16px}
+.fx{min-height:38px;padding:8px 14px}
+.lnk{padding:12px 0}
+.lg{grid-template-columns:1fr 1fr 44px}
+.lg2{grid-template-columns:44px 1fr 44px}
+.lg button,.lg2 button{min-height:44px}
+.lg2 input[type=color]{height:44px}
+.r2>div{min-width:0}
+.dd{min-width:0;min-height:46px;font-size:15px;width:100%}
+.thead .dd{width:auto;min-width:130px}
+
+/* ---------- Aba Trades ---------- */
+.tgrid{gap:14px}
+.tsum{margin-bottom:0}
+.tsum .thead{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:6px}
+.tsum .thead>div{flex-wrap:wrap!important;width:100%}
+.tsum .seg{width:auto!important;flex:1 1 140px}
+.tsum #xBtn{flex:1 1 100%}
+.tsum .dd{flex:1 1 100%}
+.sumrow{gap:8px}
+.sumrow div{padding:10px 12px}
+.sumrow b{font-size:16px}
+.card.bk .ghost{flex:1 1 100%;width:100%}
+
+/* Formulário de trade vira tela cheia, aberta pelo botão + */
+#vTrades>.card.tf:first-child{display:none;position:fixed;inset:0;z-index:80;margin:0;border-radius:0;border:0;
+ background:#07080b;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+ padding:calc(env(safe-area-inset-top,0px) + 16px) 16px calc(20px + env(safe-area-inset-bottom,0px))}
+body.mform #vTrades>.card.tf:first-child{display:block;animation:sheetUp .25s cubic-bezier(.2,.8,.3,1)}
+#vTrades>.card.tf:first-child>h3{font-size:18px;margin-bottom:16px;padding-right:52px}
+.mclose{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:5;width:44px;height:44px;
+ place-items:center;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.08);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+#tSave{position:sticky;bottom:0;z-index:3;margin-top:8px;box-shadow:0 -12px 18px 6px #07080b}
+@keyframes sheetUp{from{opacity:.6;transform:translateY(40px)}to{opacity:1;transform:none}}
+
+/* Botão flutuante de novo trade */
+.fab{position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;
+ place-items:center;border:0;border-radius:50%;background:linear-gradient(180deg,#fff,#d9d9d9);color:#000;
+ font:400 32px/1 var(--f);box-shadow:0 10px 26px -6px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.2);cursor:pointer}
+.fab:active{transform:scale(.94)}
+
+/* Tabela de trades vira lista de cartões */
+.twrap{max-height:none;min-height:0;overflow:visible}
+.twrap table,.twrap tbody{display:block;width:100%}
+.twrap thead{display:none}
+.twrap tbody tr{display:grid;grid-template-columns:1fr auto auto;
+ grid-template-areas:"sym sym pnl" "setup ty gain" "ent not not" "date sy act";
+ gap:6px 10px;align-items:center;padding:14px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;background:var(--soft)}
+.twrap tbody tr.open{border-color:rgba(255,145,0,.5)}
+.twrap tbody tr:last-child{margin-bottom:0}
+.twrap tbody tr:active{background:rgba(255,255,255,.1)}
+.twrap tbody tr:hover td{background:none}
+.twrap td{display:block;padding:0;border:0;white-space:normal;min-width:0}
+.twrap td small{font-size:11.5px}
+.twrap td:nth-child(4){grid-area:sym;font-size:17px;font-weight:700}
+.twrap td:nth-child(8){grid-area:pnl;text-align:right;font-size:18px;font-weight:700}
+.twrap td:nth-child(2){grid-area:setup;font-weight:600}
+.twrap td:nth-child(3){grid-area:ty}
+.twrap td:nth-child(7){grid-area:gain;text-align:right;color:var(--ink2)}
+.twrap td:nth-child(5){grid-area:ent}
+.twrap td:nth-child(6){grid-area:not;text-align:right}
+.twrap td:nth-child(1){grid-area:date;color:var(--ink2)}
+.twrap td:nth-child(9){grid-area:sy;justify-self:end}
+.twrap td:nth-child(10){grid-area:act;display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.twrap td:nth-child(5)::before,.twrap td:nth-child(6)::before{display:block;margin-bottom:1px;font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)}
+.twrap td:nth-child(5)::before{content:'Entrada / saída'}
+.twrap td:nth-child(6)::before{content:'Notional'}
+.twrap td button{min-width:40px;min-height:40px;font-size:22px}
+.twrap td .fx{font-size:13px;min-width:0}
+
+/* ---------- Carteira, protocolo, setups ---------- */
+.cgrid,.pgrid,.sgrid{gap:14px}
+.cwrap{margin:0 -4px;padding:0 4px;-webkit-overflow-scrolling:touch}
+.cwrap td,.cwrap th{padding:11px 10px}
+.cbox{padding:14px}
+.caps .tot b{font-size:22px}
+.rfr button{min-width:40px;min-height:40px;font-size:20px}
+.pi{gap:12px;padding:16px 0}
+.pn{width:36px;height:36px;font-size:13px}
+.pb b{margin-top:7px;font-size:15px}
+.ps{gap:8px}
+.ps button{min-height:42px;padding:8px 14px;font-size:13.5px}
+.pgo{margin-left:0;min-height:44px}
+.sd summary{padding:15px 14px}
+.sd dl{grid-template-columns:90px 1fr}
+.sp td input{width:62px}
+#vSpec .twrap{overflow-x:auto}
+#vSpec .twrap table{display:table}
+#vSpec .twrap tbody{display:table-row-group}
+#vSpec .twrap thead{display:table-header-group}
+#vSpec .twrap tbody tr{display:table-row;padding:0;margin:0;border:0;border-radius:0;background:none}
+#vSpec .twrap td{display:table-cell;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+
+/* ---------- Listas suspensas viram painel inferior ---------- */
+body:has(button.dd.open)::after{content:'';position:fixed;inset:0;z-index:85;background:rgba(0,0,0,.55)}
+body:has(button.dd.open) .ddp{left:0!important;right:0!important;top:auto!important;bottom:0!important;width:100%;min-width:0!important;
+ max-height:62vh;z-index:90;padding:10px 10px calc(14px + env(safe-area-inset-bottom,0px));
+ border-radius:22px 22px 0 0;border-width:1px 0 0;animation:sheetUp .2s ease}
+.ddi{padding:14px 14px;font-size:15.5px}
+
+/* ---------- Confirmações viram painel inferior ---------- */
+#modal,body>div[style*="z-index:50"]{place-items:end center!important;z-index:100!important}
+#modal .card,body>div[style*="z-index:50"]>.card{max-width:none!important;width:100%!important;border-radius:22px 22px 0 0;
+ padding:22px 18px calc(20px + env(safe-area-inset-bottom,0px));animation:sheetUp .22s cubic-bezier(.2,.8,.3,1)}
+#modal .ghost,#modal .go{flex:1}
+#phr{z-index:110}
+
+/* ---------- Aviso rápido ---------- */
+.toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:70;transform:translate(-50%,10px);
+ max-width:86vw;padding:11px 18px;border-radius:99px;background:#fff;color:#000;font:700 13.5px var(--f);
+ opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 10px 26px -8px #000}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:380px){
+ .r2{grid-template-columns:1fr}
+ .cards .card{flex-basis:92%}
+ h1{font-size:23px}
+}
+@media (max-height:520px) and (orientation:landscape){
+ .tabs button{min-height:44px;flex-direction:row;gap:6px;justify-content:center}
+ .tabs button svg{width:18px;height:18px}
+ .banner{position:static}
+}
+@media (prefers-reduced-motion:reduce){body.mform #vTrades>.card.tf:first-child,.ddp,#modal .card{animation:none!important}}
+
+/* ---------- Correção: nada pode ser mais largo que a tela ---------- */
+html,body{max-width:100%}
+.wrap{overflow-x:clip;width:100%}
+.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+.tabs button{min-width:0;white-space:nowrap}
+.grid,.tgrid,.cgrid,.sgrid,.pgrid{grid-template-columns:minmax(0,1fr)}
+.grid>*,.tgrid>*,.cgrid>*,.sgrid>*,.pgrid>*,.cols2>*{min-width:0}
+.cols2{grid-template-columns:minmax(0,1fr)}
+.r2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.sumrow,.cbox .sumrow,.caps,.facts,.rfr .in,.seg{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sumrow[style*="auto-fit"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.lg{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px}
+.lg2{grid-template-columns:44px minmax(0,1fr) 44px}
+.caps .tot{grid-column:1/-1}
+.tf input,.tf select,.tf textarea,.field input,.rfr input,.rfa input,.bl input{min-width:0;max-width:100%}
+.card,.cbox{min-width:0;max-width:100%}
+.thead{flex-wrap:wrap;gap:10px}
+.thead>*{min-width:0}
+.sumrow b,.caps b,.fact strong{overflow-wrap:anywhere}
+@media (max-width:380px){.r2{grid-template-columns:minmax(0,1fr)}}
+.pb .r2 input,.pb input{width:100%;min-width:0;font:600 16px var(--f);padding:12px;border:1.5px solid var(--line);border-radius:10px;background:rgba(0,0,0,.35);color:var(--ink);outline:none}
+.pb label{display:block;font-size:12px;color:var(--ink3);margin:0 0 4px;font-weight:600}
+
+/* ---------- Correção: a animação criava um "quadro" que prendia o formulário fixo ---------- */
+#vRisco,#vTrades,#vCart,#vProto,#vSpec{animation:none!important;transform:none!important}
+.wrap{transition:none}
+body.phron .wrap{transition:opacity 1.1s ease,visibility 0s linear 1.1s}
+
+/* ---------- Cabeçalho compacto ---------- */
+header{flex-direction:row!important;align-items:center;justify-content:space-between;margin-bottom:10px}
+header p{display:none}
+h1{font-size:22px}
+.today{white-space:nowrap;font-size:11.5px;padding:5px 10px}
+.tsum .thead h3{margin-bottom:0}
+.lg:has(>span){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.lg>span{display:none}
+.lg input::placeholder{font-size:13px}
+#vTrades>.card.tf:first-child{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+.banner{background:#0c0c0e!important;font-size:12.5px;padding:8px 12px;gap:10px;margin-bottom:12px}
+.banner.bad{background:#2a0b0b!important}
+.banner.warn{background:#1c1a14!important}
+#bmsg{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.banner{top:0!important;box-shadow:0 -10px 0 #05060a;border-radius:0 0 14px 14px}
+#vSpec .twrap td:nth-child(4){min-width:230px}
