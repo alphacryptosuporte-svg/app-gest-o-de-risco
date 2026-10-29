@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#000000"><link rel="icon" type="image/png" href="data:image/png;base64,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"><link rel="apple-touch-icon" href="icon-180.png"><title>Gestão de Risco</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="mobile.css?v=1" media="(max-width:820px), (pointer:coarse) and (max-height:520px)">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<div class="pulse" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+  <header>
+    <div><h1>Gestão de risco</h1><p>Teto de perda acumulada por semana e por mês, calculado sobre o capital da banca.</p></div>
+    <div class="today" id="today"></div>
+  </header>
+
+  <nav class="tabs" aria-label="Seções do app"><button id="tabR" class="on" onclick="tab('R')">Risco</button><button id="tabT" onclick="tab('T')">Trades</button><button id="tabC" onclick="tab('C')">Carteira</button><button id="tabP" onclick="tab('P')">Protocolo</button><button id="tabS" onclick="tab('S')">Setups</button></nav>
+  <div class="banner" id="banner"><i></i><span id="bmsg"></span></div>
+
+  <div class="grid" id="vRisco">
+    <div>
+      <div class="cards">
+        <section class="card sys" id="cA"></section>
+        <section class="card sys b" id="cB"></section>
+      </div>
+      <div class="rules">
+        <div class="card"><h3>Sistema A, curto prazo</h3><p id="rA"></p></div>
+        <div class="card"><h3>Sistema B, médio e longo prazo</h3><p id="rB"></p></div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="card bank"><h3>Capital da banca</h3><div class="field pre"><span class="l">$</span><input id="bankInp" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" aria-label="Capital da banca em dólares"></div><p class="note">Os tetos e o risco por trade se ajustam a este valor.</p></div>
+      <div class="card reg">
+        <h3>Perda avulsa</h3>
+        <div class="seg" role="tablist">
+          <button data-s="A" class="on" onclick="pick('A')">Sistema A</button>
+          <button data-s="B" onclick="pick('B')">Sistema B</button>
+        </div>
+        <div class="field pre"><span class="l">$</span><input id="inp" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off" aria-label="Perda em dólares"></div>
+        <div class="chips" id="chipbox"></div>
+        <div class="hint" id="hint"></div>
+        <button class="go" id="go" onclick="add()">Registrar perda</button>
+      </div>
+
+      <div class="card hist">
+        <h3>Histórico de perdas avulsas</h3>
+        <div class="list" id="list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="vTrades" class="tgrid" style="display:none">
+    <div class="card tf">
+      <h3 id="fTitle">Novo trade</h3>
+      <label>Carteira</label><div class="seg" style="margin-bottom:10px"><button id="tcU" class="on" onclick="cpick('USD')">USD</button><button id="tcB" onclick="cpick('BRL')">BRL · Ações</button></div>
+      <div class="r2"><div><label>Setup</label><input id="fSetup" placeholder="SCALP" autocomplete="off"></div><div><label>Time frame</label><select id="fTf"></select></div></div>
+      <div class="seg" style="margin-bottom:10px"><button id="tL" class="on" onclick="tpick('LONG')">LONG</button><button id="tS" onclick="tpick('SHORT')">SHORT</button></div>
+      <div class="r2"><div><label>Ativo</label><input id="fSym" placeholder="BTC" autocomplete="off"></div><div><label>Corretora</label><select id="fCor"></select></div></div>
+      <div class="seg" style="margin-bottom:12px"><button id="mF" class="on" onclick="mpick('FUTUROS')">Futuros</button><button id="mS" onclick="mpick('SPOT')">Spot</button></div>
+      <label>Entradas: preço e notional (US$)</label>
+      <div class="lg"><input id="fEnt" inputmode="decimal" placeholder="Preço"><input id="fNot" inputmode="decimal" placeholder="Notional US$"><span></span></div>
+      <div id="eMore"></div><button type="button" class="lnk" onclick="addLeg('e')">+ Entrada</button>
+      <label>Saídas: preço e notional fechado (US$)</label>
+      <div class="lg"><input id="fExit" inputmode="decimal" placeholder="Preço (vazio se aberto)"><input id="fExitN" inputmode="decimal" placeholder="Notional (vazio = tudo)"><span></span></div>
+      <div id="xMore"></div><button type="button" class="lnk" onclick="addLeg('x')">+ Saída</button>
+            <div class="r2"><div><label>Stop (opcional)</label><input id="fStop" inputmode="decimal"></div><div><label>Alvo (opcional)</label><input id="fAlvo" inputmode="decimal"></div></div>
+      <div class="r2"><div><label>Alavancagem</label><input id="fLev" inputmode="decimal" value="10"></div><div><label>Fees (US$)</label><input id="fFees" inputmode="decimal" placeholder="0,00"></div></div>
+      <div class="r2"><div><label>Data de entrada</label><input id="fDe" type="date"></div><div><label>Data de saída</label><input id="fDs" type="date"></div></div>
+      <div class="r2"><div><label>Hora de entrada</label><input id="fHe" type="time" step="1"></div><div><label>Hora de saída</label><input id="fHs" type="time" step="1"></div></div>
+      <div class="rmax" id="rmax" style="display:none"></div><div class="chips" id="pcalc"></div><div class="prev" id="prev"></div>
+      <label>Relato</label><textarea id="fRel" placeholder="O que aconteceu, o que aprendeu, se seguiu o plano"></textarea>
+      <div class="tmsg" id="tmsg"></div>
+      <button class="go" id="tSave" onclick="saveT()">Salvar trade</button>
+      <button class="ghost" id="tCancel" style="margin-top:8px;display:none" onclick="clearF()">Cancelar edição</button>
+      <datalist id="dlS"></datalist>
+    </div>
+    <div>
+      <div class="card tsum"><div class="thead"><h3>Resumo do mês</h3><div style="display:flex;gap:8px;align-items:center"><div class="seg" style="margin:0;width:170px"><button id="tvU" class="on" onclick="tviewSet('USD')">USD</button><button id="tvB" onclick="tviewSet('BRL')">BRL</button></div><button class="ghost" id="xBtn" style="display:none;width:auto;padding:8px 14px" onclick="exportX()">Baixar planilha (.xlsx)</button><select id="tMonth" onchange="month=this.value;renderTrades()"></select></div></div><div class="sumrow" id="sumBox"></div><div id="eq" style="margin-top:14px"></div><div class="tmsg" id="xmsg" style="margin-bottom:0"></div></div>
+      <div class="card tf"><h3>Filtrar trades</h3><input id="tfQ" placeholder="Buscar ativo, setup, corretora ou relato" autocomplete="off" oninput="tfSet('q',this.value)">
+        <div class="r2" style="margin-top:10px"><select id="tfS" onchange="tfSet('s',this.value)"></select><select id="tfC" onchange="tfSet('c',this.value)"></select></div>
+        <div class="r2" style="margin:0"><select id="tfR" onchange="tfSet('r',this.value)"><option value="">Todos os resultados</option><option value="G">Ganhos</option><option value="L">Perdas</option><option value="O">Abertos</option></select><select id="tfO" onchange="tfSet('o',this.value)"><option value="D">Mais recentes</option><option value="A">Mais antigos</option><option value="G">Maior ganho</option><option value="P">Maior perda</option></select></div>
+        <p class="note" id="tfN" style="margin:8px 0 0"></p></div>
+      <div class="card"><div class="twrap"><table><thead><tr><th>Saída</th><th>Setup</th><th>Tipo</th><th>Ativo</th><th>Entrada</th><th>Notional</th><th>Gain %</th><th>Profit líquido</th><th>Sist.</th><th></th></tr></thead><tbody id="tBody"></tbody></table></div><div class="empty" id="tEmpty" style="display:none;padding-top:14px">Nenhum trade neste mês. Preencha o formulário e salve.</div></div>
+      <div class="card" id="brCard"><h3 style="margin-bottom:12px">Corretoras</h3><div id="brList"></div><button type="button" class="lnk" onclick="brAdd()">+ Corretora</button><p class="note" style="margin:0">Trades abertos aparecem na cor da corretora escolhida.</p></div>
+      <div class="card bk"><p>Seus dados ficam salvos neste navegador. Baixe um backup de vez em quando.</p><p id="bkInfo" class="note" style="margin:0;flex:1 1 100%"></p><button class="ghost" onclick="backup()">Backup (.json)</button><button class="ghost" onclick="bkIn.click()">Restaurar backup</button><input type="file" id="bkIn" accept=".json,application/json" hidden onchange="restore(this)"><div class="tmsg" id="kmsg" style="margin:0"></div></div>
+    </div>
+  </div>
+  <div id="vSpec" class="sgrid" style="display:none">
+    <div class="card"><div class="thead" style="margin-bottom:12px"><h3>Risco máximo por operacional</h3><button class="ghost" style="width:auto;padding:8px 14px" onclick="specReset()">Restaurar padrão</button></div>
+      <p class="note" style="margin:0 0 14px">Os valores originais foram definidos para uma banca de $600 (12 = 2%, 6 = 1%, 18 = 3%). Aqui eles ficam em % da banca e acompanham o capital atual: <b id="spBank" style="color:var(--ink)"></b>. Edite o % de qualquer linha para ajustar.</p>
+      <div class="twrap" style="max-height:none"><table class="sp"><thead><tr><th>Operacional</th><th>T.F até H1</th><th>T.F acima de H1</th><th>Regra</th></tr></thead><tbody id="spBody"></tbody></table></div></div>
+    <div class="card"><h3 style="margin-bottom:4px">Especificações dos setups</h3><p class="note" style="margin:0 0 14px">Resumo do ebook Masterclass de Trading. Toque num setup para ver time frame, entrada, stop, alvo e o risco máximo atual.</p><div id="spInfo"></div></div>
+    <div class="card tf"><h3 style="margin-bottom:4px">Tetos de perda</h3><p class="note" style="margin:0 0 14px">Percentuais da banca usados nos cartões, avisos, resumo e relatórios.</p>
+      <div class="r2"><div><label>Sistema A, por semana (%)</label><input id="cfgA" inputmode="decimal" autocomplete="off" onchange="cfgSet('A',this.value)"></div><div><label>Sistema B, por mês (%)</label><input id="cfgB" inputmode="decimal" autocomplete="off" onchange="cfgSet('B',this.value)"></div></div>
+      <label>Limite de perda do resumo mensal (%)</label><input id="cfgD" inputmode="decimal" autocomplete="off" onchange="cfgSet('D',this.value)">
+      <button class="ghost" style="margin-top:12px" onclick="cfgReset()">Restaurar padrão (6%, 8% e 10%)</button></div>
+    <div class="card"><h3 style="margin-bottom:8px">Como o limite é aplicado</h3>
+      <p class="note" style="margin:0;line-height:1.7">Ao cadastrar um trade, escolha o setup e o time frame: o app mostra na hora o risco máximo daquele operacional. Se o que resta no teto semanal (Sistema A) ou mensal (Sistema B) for menor, vale o menor valor. Com stop preenchido, o app avisa quando o risco passa do máximo e sugere o notional para cada nível de risco. Setups sem regra própria (MEIO DIA, VIP) usam o limite do sistema.</p></div>
+  </div>
+  <div id="vProto" class="pgrid" style="display:none">
+    <div class="gate-note"><b>Passo obrigatório de hoje.</b> Conclua o protocolo abaixo para liberar o app. Até lá, as outras abas e as informações ficam bloqueadas.</div>
+    <div class="card"><div class="thead"><h3>Protocolo diário</h3><button class="ghost" style="width:auto;padding:8px 14px" onclick="pReset()">Reiniciar o dia</button></div><div class="pbar"><i id="pFill"></i></div><div class="pst" id="pStat"></div><div id="pList"></div></div>
+    <div class="card"><h3 style="margin-bottom:4px">Protocolo × resultado</h3><div class="sumrow" id="phBody" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"></div><p class="note" id="phNote" style="margin:10px 0 0"></p></div>
+    <p class="note" style="margin:0">Baseado na rotina diária do ebook Masterclass de Trading. O checklist reinicia sozinho a cada novo dia e fica salvo neste navegador.</p>
+  </div>
+  <div id="vCart" class="cgrid" style="display:none">
+    <div class="card" id="rfCard"><div class="thead" style="margin-bottom:12px"><h3>Carteiras USD e BRL</h3><input type="month" id="rfM" aria-label="Mês" onchange="rfMonth=this.value||rfMonth;rfRender()"></div><p class="note" style="margin:0 0 14px">Renda fixa com lucro do mês anotado manualmente. Trades da carteira BRL (ações brasileiras) entram em R$ e não afetam os limites de risco em USD.</p><div class="cols2"><div id="rfU"></div><div id="rfB"></div></div></div>
+    <div class="card"><div class="thead"><h3>Carteira USD acumulada (trades)</h3><small id="cInfo" style="color:var(--ink3);font-size:12px"></small></div><div class="sumrow" id="cSum"></div><div id="cChart" style="margin-top:14px"></div></div>
+    <div class="card"><h3 style="margin-bottom:10px">Mês a mês</h3><div class="cwrap"><table><thead><tr><th>Mês</th><th>Trades</th><th>Acerto</th><th>Resultado</th><th>Retorno</th><th>Acumulado</th><th>Acum. %</th></tr></thead><tbody id="cBody"></tbody></table></div><div class="empty" id="cEmpty" style="display:none;padding-top:14px">Nenhum trade registrado ainda. Salve trades na aba Trades para acompanhar a carteira.</div></div>
+    <div class="card tf"><h3>Capital e movimentações</h3><div class="r2"><div><label>Capital inicial da carteira (US$)</label><input id="baseInp" inputmode="decimal" placeholder="0,00"></div><div><label>Capital atual: <b id="capNow"></b></label><button class="ghost" style="margin-top:2px" onclick="useCap()">Aplicar ao teto de risco</button></div></div><div class="r2"><div><label>Data do aporte ou saque</label><input id="flD" type="date"></div><div><label>Valor (negativo = saque)</label><input id="flV" inputmode="decimal" placeholder="500 ou -200"></div></div><button class="ghost" onclick="addFlow()">Registrar movimentação</button><div id="flList" style="margin-top:8px"></div><p class="note">O capital inicial e as movimentações alimentam só a Carteira. Mudar o capital da aba Risco não reescreve mais o histórico.</p></div>
+    <div class="card" id="perfCard"><h3 style="margin-bottom:10px">Desempenho por recorte</h3>
+      <div class="chips" id="perfDims"><button data-d="setup" onclick="perfDim('setup')">Setup</button><button data-d="ativo" onclick="perfDim('ativo')">Ativo</button><button data-d="corretora" onclick="perfDim('corretora')">Corretora</button><button data-d="dia" onclick="perfDim('dia')">Dia da semana</button><button data-d="hora" onclick="perfDim('hora')">Hora de entrada</button></div>
+      <div class="sumrow" id="perfSum" style="margin:0 0 12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"></div>
+      <div class="cwrap"><table><thead><tr><th>Grupo</th><th>Trades</th><th>Acerto</th><th>Resultado</th><th>Expectativa</th></tr></thead><tbody id="perfBody"></tbody></table></div>
+      <p class="note" style="margin:10px 0 0">Considera trades fechados da carteira USD. O R de cada trade é o resultado dividido pelo risco até o stop; trades sem stop ficam fora da conta de R.</p></div>
+    <div class="card" id="cRepCard"><div class="thead" style="margin-bottom:12px"><h3>Relatório do mês</h3><select id="cMonth" onchange="cmonth=this.value;renderCart()"></select></div><div id="cRep"></div></div>
+  </div>
+</div>
+
+<div id="phr" onclick="hidePhrase()"><span>Frase do dia</span><div class="phq"><p id="phrTxt"></p></div></div>
+<div id="modal" style="display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.72);place-items:center"><div class="card" style="max-width:360px;width:90%;background:#0b0b0b"><p id="mTxt" style="margin-bottom:16px;line-height:1.5"></p><div style="display:flex;gap:8px"><button class="ghost" id="mNo">Cancelar</button><button class="go" id="mYes" style="background:var(--bad);color:#fff">Confirmar</button></div></div></div>
+<script src="app.js?v=3"></script>
+<script src="fundo.js?v=3"></script>
+<script src="mobile.js?v=1"></script>
+</body>
+</html>
