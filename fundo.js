@@ -7,7 +7,8 @@ const dn=Math.floor((Date.now()-new Date().getTimezoneOffset()*6e4)/864e5);
 let a=(dn*40503+7)>>>0;const rnd=()=>{a=(a*1664525+1013904223)>>>0;return a/4294967296};
 const dir=rnd()<.5?-1:1,ph=rnd()*20,ax=.42+rnd()*.16,N=30+Math.floor(rnd()*20);
 const P=[...Array(N)].map(()=>({x:rnd(),y:rnd(),r:.6+rnd()*1.7,s:4+rnd()*10,o:rnd()*6.28,a:.12+rnd()*.3}));
-let W,H;function fit(){const q=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*q;cv.height=H*q;x.setTransform(q,0,0,q,0,0)}
+const touch=matchMedia('(pointer:coarse)').matches;
+let W,H;function fit(){if(W&&W===innerWidth&&Math.abs(H-innerHeight)<200)return;const q=touch?1:Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*q;cv.height=H*q;x.setTransform(q,0,0,q,0,0)}
 fit();addEventListener('resize',fit);
 const img=new Image();
 img.onload=()=>{
@@ -27,7 +28,7 @@ img.onload=()=>{
   if(lk){x.fillStyle='rgba(255,48,48,.1)';x.fillRect(0,0,W,H)}
   const M=Math.max(W,H),vg=x.createRadialGradient(W/2,H/2,M*.25,W/2,H/2,M*.8);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.6)');x.fillStyle=vg;x.fillRect(0,0,W,H)}
  if(matchMedia('(prefers-reduced-motion:reduce)').matches)frame(0);
- else{const lp=ms=>{frame(ms);requestAnimationFrame(lp)};requestAnimationFrame(lp)}
+ else{let last=0;const lp=ms=>{requestAnimationFrame(lp);if(touch&&ms-last<33)return;last=ms;frame(ms)};requestAnimationFrame(lp)}
 };
 img.src=IMG;
 })();
